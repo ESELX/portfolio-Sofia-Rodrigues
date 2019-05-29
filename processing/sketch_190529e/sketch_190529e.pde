@@ -41,6 +41,11 @@ void draw() {
   fill(255);
   line(0, 0, 6000, 6000);
   
+  stroke(0);
+  strokeWeight(2);
+  noFill();
+  ellipse(0,0,500,70);
+  
   //strokeWeight(3);
   //fill(255);
   //line(0, 0, -6000, -6000);
@@ -54,12 +59,12 @@ void draw() {
   fill(195,9,10);
   ellipse(300, 300, 55, 55);
   
-  fill(215, 244, 238);
+  noFill();
   stroke(0);
   strokeWeight(3);
   bezier(-70, -5, -10, -10, -120, -120, -90, -80);
   
-  fill(215, 244, 238);
+  noFill();
   stroke(0);
   strokeWeight(3);
   bezier(70, 5, 10, 10, 120, 120, 90, 80);
@@ -73,6 +78,11 @@ void draw() {
   strokeWeight(1);
   noFill();
   rect(-26, -26, 53, 53);
+  
+  stroke(0);
+  strokeWeight(1);
+  noFill();
+  arc(0, 0, 700, 700, 0, PI+QUARTER_PI, OPEN);
   
 
 
