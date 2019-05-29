@@ -16,10 +16,14 @@ void draw() {
   
   translate(width/2, height/2);
   rotate(a);
+  
+  strokeWeight(0);
   fill(255);
   rect(-26, -26, 52, 52);
-  //strokeWeight(12);
+  strokeWeight(9);
   fill(255);
   line(0, 0, 6000, 6000);
+  strokeWeight(1);
+  ellipse(56, 46, 55, 55);
   
 }
