@@ -9,15 +9,20 @@ void setup() {
 file = new SoundFile(this,"groove.mp3");
 file.play();
 l = file.duration();
+file.jump(5);
+
   
 }
 
 void draw() {
+
+  
   background(0);
   
   aAcceleration = map(mouseX,0,width,-0.01,0.01);
   a += aVelocity;
   aVelocity += aAcceleration;
+  
   
   translate(width/2, height/2);
   rotate(a);
