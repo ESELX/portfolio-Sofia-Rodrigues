@@ -1,7 +1,12 @@
 import processing.sound.*;
 
 SoundFile file;
-float a = 0.0, aVelocity = 0.0, aAcceleration = 0.01, l = 0;
+float a = 0.0, aVelocity = 0.0, aAcceleration = 0.01, l = 0, w = 0;
+
+/* PVector velocity;
+PVector acceleration; */
+
+
 
 void setup() {
   size(1200,800);
@@ -9,7 +14,10 @@ void setup() {
 file = new SoundFile(this,"groove.mp3");
 file.play();
 l = file.duration();
-file.jump(5);
+file.rate(1.2);
+
+//file.jump(5);
+
 
   
 }
@@ -21,7 +29,14 @@ void draw() {
   
   aAcceleration = map(mouseX,0,width,-0.01,0.01);
   a += aVelocity;
+  w += aVelocity;
   aVelocity += aAcceleration;
+
+  
+ 
+ //file +=aVelocity;
+  
+ // file.aAcceleration = map(mouseX,mouseY, -0.00, 10);
   
   
   translate(width/2, height/2);
