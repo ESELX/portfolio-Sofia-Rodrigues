@@ -11,12 +11,10 @@ PVector acceleration; */
 void setup() {
   size(1200,800);
   
-file = new SoundFile(this,"groove.mp3");
+file = new SoundFile(this,"binolas.mp3");
 file.play();
 l = file.duration();
-file.rate(1.2);
-
-//file.jump(5);
+file.loop();
 
 
   
@@ -27,7 +25,7 @@ void draw() {
   
   background(0);
   
-  aAcceleration = map(mouseX,0,width,-0.01,0.01);
+  aAcceleration = map(mouseX,0,width,-0.007,0.007);
   a += aVelocity;
   w += aVelocity;
   aVelocity += aAcceleration;
